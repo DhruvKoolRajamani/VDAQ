@@ -1,4 +1,7 @@
 python3
 libpython3-dev
-git
-curl
+bluetooth
+bluez
+bluez-tests
+bluez-tools
+blueman

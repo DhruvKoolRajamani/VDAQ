@@ -9,5 +9,17 @@ __date__ = "17 May 2019"
 
 import obd
 
-obd.OBD()
-print("Hello World")
+obd.logger.setLevel(obd.logging.DEBUG)
+
+ports = obd.scan_serial()  # return list of valid USB or RF ports
+
+if ports.len() == 0:
+    is_bluetooth_paired = False
+else:
+    is_bluetooth_paired = True
+
+if is_bluetooth_paired:
+    print("{} Port found, connecting to OBD Port ...".format(ports[0]))
+    connection = obd.OBD(portstr=ports[0], baudrate=9600)
+else:
+    print("No port available on the Bluetooth Port")
