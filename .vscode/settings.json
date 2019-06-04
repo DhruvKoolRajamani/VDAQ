@@ -5,11 +5,10 @@
   "editor.formatOnSave": true,
   "python.formatting.provider": "yapf",
   "editor.rulers": [
-    50,
     79
   ],
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 90,
+  "editor.wordWrapColumn": 80,
   "editor.tabSize": 4,
   "files.autoSave": "onWindowChange",
   "editor.tabCompletion": "onlySnippets",
